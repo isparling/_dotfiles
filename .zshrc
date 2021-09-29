@@ -22,3 +22,5 @@ function openpr() {
   pr_url=$github_url"/compare/$source_branch...$branch_name";
   open $pr_url;
 }
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
