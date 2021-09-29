@@ -8,7 +8,7 @@ export GIT_PS1_SHOWCOLORHINTS=true;
 export GIT_PS1_STATESEPARATOR="";
 precmd () { __git_ps1 "[$fg[green]%n$reset_color$fg[yellow]:$reset_color$fg[blue]%c$reset_color]" "$ " "(%s)" }
 
-
+autoload -Uz compinit && compinit
 
 function openpr() {
   github_url=`git remote -v | awk '/fetch/{print $2}' | sed -Ee 's#(git@|git://)#https://#' -e 's@com:@com/@' -e 's%\.git$%%' | awk '/github/'`;
