@@ -1,12 +1,46 @@
 source ~/.git-prompt.sh
 autoload -U colors && colors
+if [[ -n ${TERM} && ! "${TERM}" == 'dumb' && ! "$TERM" == 'unknown' ]]; then
+    export CRST="$(tput sgr0)"
+    export BOLD="$(tput bold)"
+    export LRED="$(tput setaf 1)"
+    export LGRN="$(tput setaf 2)"
+    export LYEL="$(tput setaf 3)"
+    export LBLU="$(tput setaf 4)"
+    export LMAG="$(tput setaf 5)"
+    export LCYA="$(tput setaf 6)"
+    export LWHT="$(tput setaf 7)"
+fi
+
+# Local settings
+export LANG="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LC_NUMERIC="en_US.UTF-8"
+export LC_TIME="en_US.UTF-8"
+export LC_COLLATE="en_US.UTF-8"
+export LC_MONETARY="en_US.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
+export LC_PAPER="en_US.UTF-8"
+export LC_NAME="en_US.UTF-8"
+export LC_ADDRESS="en_US.UTF-8"
+export LC_TELEPHONE="en_US.UTF-8"
+export LC_MEASUREMENT="en_US.UTF-8"
+export LC_IDENTIFICATION="en_US.UTF-8"
+
+# Common command options
+export LS_OPTIONS='-h -G'
+export LSCOLORS='Exfxbxdxcxegedabagacad'
+export EDITOR="vim"
+export CLICOLOR=1
+export LESS=' -R '
+
 setopt PROMPT_SUBST;
 export GIT_PS1_SHOWDIRTYSTATE=true;
 export GIT_PS1_SHOWUNTRACKEDFILES=true;
 export GIT_PS1_SHOWCOLORHINTS=true;
 # separator defaults to " " -- removes it completely.
 export GIT_PS1_STATESEPARATOR="";
-precmd () { __git_ps1 "[$fg[green]%n$reset_color$fg[yellow]:$reset_color$fg[blue]%c$reset_color]" "$ " "(%s)" }
+precmd () { __git_ps1 "$fg[yellow] [$reset_color$fg[magenta]%n$reset_color$fg[yellow]:$reset_color$BOLD$fg[blue]%c$reset_color$fg[yellow]]" "$fg[yellow] $BOLD> $reset_color" " $fg[cyan]($reset_color%s$fg[cyan])$reset_color" }
 
 autoload -Uz compinit && compinit
 
