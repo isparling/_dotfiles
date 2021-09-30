@@ -40,7 +40,7 @@ export GIT_PS1_SHOWUNTRACKEDFILES=true;
 export GIT_PS1_SHOWCOLORHINTS=true;
 # separator defaults to " " -- removes it completely.
 export GIT_PS1_STATESEPARATOR="";
-precmd () { __git_ps1 "$fg[yellow] [$reset_color$fg[magenta]%n$reset_color$fg[yellow]:$reset_color$BOLD$fg[blue]%c$reset_color$fg[yellow]]" "$fg[yellow] $BOLD> $reset_color" " $fg[cyan]($reset_color%s$fg[cyan])$reset_color" }
+precmd () { __git_ps1 "$fg[yellow] [$reset_color$fg[magenta]%n$reset_color$fg[yellow]:$reset_color$BOLD$fg[blue]%c$reset_color$fg[yellow]]" "$fg[yellow]$BOLD> $reset_color" " $fg[cyan]($reset_color%s$fg[cyan])$reset_color" }
 
 autoload -Uz compinit && compinit
 
