@@ -34,6 +34,9 @@ export EDITOR="vim"
 export CLICOLOR=1
 export LESS=' -R '
 
+# Ensure we have emacs keybindings (^a, ^e for line nav) -- without, vscode terminal fails
+bindkey -e;
+
 setopt PROMPT_SUBST;
 export GIT_PS1_SHOWDIRTYSTATE=true;
 export GIT_PS1_SHOWUNTRACKEDFILES=true;
