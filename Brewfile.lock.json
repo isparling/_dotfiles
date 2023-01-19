@@ -101,6 +101,12 @@
         "options": {
           "full_name": "1password/tap/1password-cli"
         }
+      },
+      "sequel-ace": {
+        "version": "4.0.5,20046",
+        "options": {
+          "full_name": "sequel-ace"
+        }
       }
     },
     "brew": {

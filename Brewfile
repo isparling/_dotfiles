@@ -19,6 +19,8 @@ cask "graphql-playground"
 cask "altair-graphql-client"
 cask "google-cloud-sdk"
 cask "signal"
+# the ARM64 fork+sequel to `sequel-pro`
+cask "sequel-ace"
 
 # Shell Utils
 brew "jq"
