@@ -95,6 +95,12 @@
         "options": {
           "full_name": "op"
         }
+      },
+      "1password-cli": {
+        "version": "2.12.0",
+        "options": {
+          "full_name": "1password/tap/1password-cli"
+        }
       }
     },
     "brew": {
@@ -249,6 +255,8 @@
         }
       },
       "signal": {
+      },
+      "1password/tap/1password-cli": {
       }
     }
   },
