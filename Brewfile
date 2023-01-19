@@ -17,10 +17,10 @@ cask "ngrok"
 cask "graphql-playground"
 cask "altair-graphql-client"
 cask "google-cloud-sdk"
+cask "signal"
 
 # Shell Utils
 brew "jq"
 brew "colordiff"
 brew "diffutils"
-brew "docker-completion"
 brew "launchctl-completion"

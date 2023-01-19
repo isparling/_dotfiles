@@ -83,6 +83,12 @@
         "options": {
           "full_name": "google-cloud-sdk"
         }
+      },
+      "signal": {
+        "version": "6.2.0",
+        "options": {
+          "full_name": "signal"
+        }
       }
     },
     "brew": {
@@ -235,6 +241,8 @@
             }
           }
         }
+      },
+      "signal": {
       }
     }
   },
