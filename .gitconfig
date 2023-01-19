@@ -1,0 +1,68 @@
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
+[user]
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKFgnez4q4/eV/APGGA5Q+dQCqyu42elDBpu3YTeMLUJ
+	email = 223606+isparling@users.noreply.github.com
+    name = Isaac Sparling
+[github]
+    user = isparling
+[branch "dev"]
+    remote = origin
+    merge = refs/heads/dev
+[branch "develop"]
+    remote = origin
+    merge = refs/heads/develop
+[branch "rc"]
+    remote = origin
+    merge = refs/heads/rc
+[alias]
+    poh = push origin HEAD
+	pulloh = pull origin HEAD
+	set-upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD` 
+	cj = !bash -c 'git commit -m \":`. emoji`: $0\"'
+	cja = !bash -c 'git commit -am \":`. emoji`: $0\"'
+    st = status
+    ci = commit
+    ca = "!git add . && git commit -a"
+    caa = "!git add . && git commit -a --amend -C HEAD"
+    up = "!git remote update -p && git merge --ff-only @{u}"
+    sortdiff = !sh -c 'git diff "$@" | grep "^[+-]" | sort --key=1.2 | uniq -u -s1'
+    deletemerged = "!git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d"
+    # bclean = "!f() { BR=`git rev-parse --abbrev-ref HEAD` git branch --merged ${BR} | grep -v " ${BR}$" | xargs -r git branch -d; }; f"
+    co = checkout
+    sta = stash
+    br = branch
+    di = diff
+    ls = log --oneline
+    llog = log --date=local
+    pl = pull
+    pu = push
+    fe = fetch
+    unstage = reset HEAD --
+    search = log --all --grep
+    # short logs
+    lg  ="!git --no-pager log -10 --pretty=format:\"%h - %an: %s (%ar)\""
+    # short status
+    st = status -sb
+    # short difs
+    dif = "!git --no-pager diff --color --stat"
+    # what did i do since yesterday?
+    standup = "!git log --since yesterday --autho `git config user.email` --pretty=short"
+[apply]
+    whitespace = nowarn
+[push]
+    default = matching
+[color]
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
+    ui = auto
+[branch]
+    autosetupmerge = true
+[pull]
+	ff = only
