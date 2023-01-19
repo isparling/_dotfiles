@@ -2,7 +2,7 @@
   "entries": {
     "tap": {
       "homebrew/cask-fonts": {
-        "revision": "b494ea9a387d2e9d9fa392ecf363f512674fe3a8"
+        "revision": "2ea7c0fd33ee3fbd98c32471ebfc7295136b16a9"
       }
     },
     "cask": {
@@ -88,6 +88,12 @@
         "version": "6.2.0",
         "options": {
           "full_name": "signal"
+        }
+      },
+      "op": {
+        "version": null,
+        "options": {
+          "full_name": "op"
         }
       }
     },
@@ -249,9 +255,9 @@
   "system": {
     "macos": {
       "ventura": {
-        "HOMEBREW_VERSION": "3.6.19",
+        "HOMEBREW_VERSION": "3.6.20",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "8d783467f57644011b625e66eb8f5ee448563133",
+        "Homebrew/homebrew-core": "b1f8ec71d398ebeaec44e84995df5222e2160258",
         "CLT": "14.2.0.0.1.1668646533",
         "Xcode": "14.1",
         "macOS": "13.1"
