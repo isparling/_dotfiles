@@ -10,5 +10,7 @@ cp emoji.sh /usr/local/bin/emoji
 echo "random emoji script installed at [/usr/local/bin/emoji]"
 cp .gitconfig ~/.gitconfig
 echo ".gitconfig copied to ~/.gitconfig"
+cp .vimrc ~/.vimrc
+echo ".vimrc copied to ~/.vimrc"
 
 echo "Please restart your shell"
