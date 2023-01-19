@@ -76,3 +76,4 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 # Prefer the gnu tools installed via 
 export PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"
+export GOOGLE_APPLICATION_CREDENTIALS="${HOME}/.config/gcloud/application_default_credentials.json"
