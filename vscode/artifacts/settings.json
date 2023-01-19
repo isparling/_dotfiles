@@ -1,0 +1,96 @@
+{
+  "editor.formatOnSave": true,
+  "editor.fontFamily": "FiraCode-Light",
+  "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'zero', 'onum'",
+  "editor.minimap.enabled": false,
+  "editor.parameterHints.enabled": false,
+  "editor.renderWhitespace": "none",
+  "editor.semanticHighlighting.enabled": false,
+  "editor.tabSize": 2,
+  "editor.rulers": [
+    {
+      "column": 100,
+      "color": "#222"
+    }
+  ],
+  // "javascript.implicitProjectConfig.experimentalDecorators": true,
+  "js/ts.implicitProjectConfig.experimentalDecorators": true,
+  "search.exclude": {
+    "**/__generated__": true,
+    "**/.git": true,
+    "**/*.code-search": true,
+    "**/*.gql": true,
+    "**/*.graphql": true,
+    "**/bower_components": true,
+    "**/dist": true,
+    "**/lib/**/*.d.ts": true,
+    "**/lib/**/*.js": true,
+    "**/lib/**/*.js.*": true,
+    "**/node_modules": true,
+    "**/node_modules/**": true,
+    "**/yarn.lock": true
+  },
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.editor.showTabs": true,
+  "workbench.iconTheme": "file-icons",
+  "workbench.fontAliasing": "default",
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  // This gets picked up by prettier extension.
+  // "prettier":{
+  //     "semi": true,
+  //     "trailingComma": "none",
+  //     "singleQuote": true,
+  //     "printWidth": 100,
+  //     "tabWidth": 2,
+  //     "arrowParens": "avoid",
+  //     "overrides": [{ "files": ["*.yaml", "*.yml"], "options": {"singleQuote": false, "doubleQuote": true } }]
+  // },
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "strings": "on",
+      "other": "on"
+    }
+  },
+  "debug.toolBarLocation": "docked",
+  "explorer.confirmDragAndDrop": false,
+
+  "files.associations": {
+    "*.yaml.jst": "yaml"
+  },
+  // Seems required to make sure ~/.bash_profile gets sourced for integrated terminal.
+  // "terminal.integrated.shellArgs.osx": ["-l"],
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.editor.untitled.hint": "hidden",
+  "workbench.startupEditor": "none",
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    // "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[graphql]": {
+    "editor.formatOnSave": true
+    // "editor.defaultFormatter": "normanstypczynskipublisher.gqlformatter"
+  },
+  // "vetur.format.enable": true,
+  // Some reason the s
+  // "[vue]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // }
+  "terminal.integrated.gpuAcceleration": "on",
+  "normanstypczynski.gqlformatter.formatGqlString.tabSize": 2,
+  "normanstypczynski.gqlformatter.enable.graphql": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "eslint.alwaysShowStatus": true,
+  "window.zoomLevel": 2
+}
