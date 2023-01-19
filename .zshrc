@@ -1,3 +1,14 @@
+# @see(https://unix.stackexchange.com/questions/339954/zsh-command-not-found-compinstall-compinit-compdef)
+autoload -Uz compinit
+compinit
+# onepassword cl typeahead
+eval "$(op completion zsh)"; compdef _op op
+export RFI_VAULT_PASSWORD="op://Deploys - Non Production/vault.rest/password"
+export RFI_VAULT_PASSWORD_PRODUCTION="op://Deploys/vault.production/password"
+export RFI_VAULT_PASSWORD_SANDBOX="op://Deploys - Non Production/vault.sandbox/password"
+export RFI_VAULT_PASSWORD_STAGING="op://Deploys - Non Production/vault.staging/password"
+export RFI_VAULT_PASSWORD_DEV="op://Deploys - Non Production/vault.dev/password"
+
 source ~/.git-prompt.sh
 autoload -U colors && colors
 if [[ -n ${TERM} && ! "${TERM}" == 'dumb' && ! "$TERM" == 'unknown' ]]; then
