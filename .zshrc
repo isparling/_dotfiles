@@ -74,3 +74,5 @@ function openpr() {
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+# Prefer the gnu tools installed via 
+export PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"

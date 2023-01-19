@@ -1,6 +1,8 @@
 #!/bin/zsh
 mv ~/.zshrc ~/.zshrc.bk
 echo "Original .zshrc backed up to ~/.zshrc.bk"
+brew bundle
+echo "bundle installed"
 
 cp .zshrc ~/.zshrc
 echo ".zshrc copied to ~/.zshrc"
