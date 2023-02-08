@@ -21,6 +21,7 @@ cask "google-cloud-sdk"
 cask "signal"
 # the ARM64 fork+sequel to `sequel-pro`
 cask "sequel-ace"
+cask "zoom"
 
 # Shell Utils
 brew "jq"
