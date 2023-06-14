@@ -30,6 +30,7 @@ brew "diffutils"
 brew "launchctl-completion"
 brew "openssh", link: true
 brew "openssl"
+brew "fzf"
 
 # Needed by rumbleship workstation
 brew "wget"
