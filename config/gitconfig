@@ -31,7 +31,7 @@
     caa = "!git add . && git commit -a --amend -C HEAD"
     up = "!git remote update -p && git merge --ff-only @{u}"
     sortdiff = !sh -c 'git diff "$@" | grep "^[+-]" | sort --key=1.2 | uniq -u -s1'
-    deletemerged = "!git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d"
+    deletemerged = "!git branch --merged main | grep -v '^[ *]*main$' | xargs git branch -d"
     # bclean = "!f() { BR=`git rev-parse --abbrev-ref HEAD` git branch --merged ${BR} | grep -v " ${BR}$" | xargs -r git branch -d; }; f"
     co = checkout
     sta = stash

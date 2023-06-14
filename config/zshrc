@@ -1,5 +1,11 @@
 # @see(https://unix.stackexchange.com/questions/339954/zsh-command-not-found-compinstall-compinit-compdef)
 autoload -Uz compinit
+
+# Load git-prompt.zsh (see: https://github.com/woefe/git-prompt.zsh)
+autoload -U add-zsh-hook
+source ~/_dotfiles/lib/git-prompt.zsh/git-prompt.zsh
+source ~/_dotfiles/prompt-theme.zsh
+
 compinit
 # onepassword cl typeahead
 eval "$(op completion zsh)"; compdef _op op
@@ -9,7 +15,6 @@ export RFI_VAULT_PASSWORD_SANDBOX="op://Deploys - Non Production/vault.sandbox/p
 export RFI_VAULT_PASSWORD_STAGING="op://Deploys - Non Production/vault.staging/password"
 export RFI_VAULT_PASSWORD_DEV="op://Deploys - Non Production/vault.dev/password"
 
-source ~/.git-prompt.sh
 autoload -U colors && colors
 if [[ -n ${TERM} && ! "${TERM}" == 'dumb' && ! "$TERM" == 'unknown' ]]; then
     export CRST="$(tput sgr0)"
@@ -54,7 +59,6 @@ export GIT_PS1_SHOWUNTRACKEDFILES=true;
 export GIT_PS1_SHOWCOLORHINTS=true;
 # separator defaults to " " -- removes it completely.
 export GIT_PS1_STATESEPARATOR="";
-precmd () { __git_ps1 "$fg[yellow] [$reset_color$fg[magenta]%n$reset_color$fg[yellow]:$reset_color$BOLD$fg[blue]%c$reset_color$fg[yellow]]" "$fg[yellow]$BOLD> $reset_color" " $fg[cyan]($reset_color%s$fg[cyan])$reset_color" }
 
 autoload -Uz compinit && compinit
 
