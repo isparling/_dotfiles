@@ -31,6 +31,7 @@ brew "launchctl-completion"
 brew "openssh", link: true
 brew "openssl"
 brew "fzf"
+brew "thefuck"
 
 # Needed by rumbleship workstation
 brew "wget"
