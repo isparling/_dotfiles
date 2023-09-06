@@ -13,6 +13,7 @@ cask "quicklook-json"
 # Various and sundry other helpful items
 cask "iterm2"
 cask "docker"
+cask "orbstack"
 cask "ngrok"
 cask "1password/tap/1password-cli"
 cask "graphql-playground"
