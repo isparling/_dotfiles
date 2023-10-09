@@ -7,9 +7,16 @@ if [ ! -d "lib/git-prompt.zsh" ]; then
   git clone git@github.com:woefe/git-prompt.zsh.git lib/git-prompt.zsh
   echo "  woefe/git-prompt.zsh.git cloned to lib/"
 fi
-
 if [ -d lib/git-prompt.zsh ]; then
   echo "  woefe/git-prompt.zsh.git already cloned"
+fi
+
+echo "Cloning flexoki"
+if [ ! -d "lib/flexoki" ]; then
+  git clone git@github.com:kepano/flexoki.git lib/flexoki
+  echo "  flexoki cloned to lib/"
+if [ -d lib/flexoki ]; then
+  echo "  flexoki already cloned"
 fi
 
 for CONFIG in $(ls config/)
