@@ -94,3 +94,6 @@ function aws-sso-export() {
 # Created by `pipx` on 2023-11-09 21:52:02
 export PATH="$PATH:/Users/isaac/.local/bin"
 eval "$(register-python-argcomplete pipx)"
+
+# 2023-11-09: installing llm@0.12 via pipx fails because aiohttp cannot be built against python3.12
+export PIPX_DEFAULT_PYTHON=python3.11
