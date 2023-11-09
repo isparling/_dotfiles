@@ -24,6 +24,11 @@ cask "signal"
 cask "sequel-ace"
 cask "zoom"
 
+brew "pnpm"
+brew "pipx"
+brew "python3", link: true
+# brew "llm"
+
 # Shell Utils
 brew "jq"
 brew "colordiff"

@@ -78,6 +78,19 @@ function openpr() {
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
-# Prefer the gnu tools installed via 
+alias pn=pnpm
+source /Users/isaac/.config/op/plugins.sh
+
+# Prefer the gnu tools installed via homebrew
 export PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"
 export GOOGLE_APPLICATION_CREDENTIALS="${HOME}/.config/gcloud/application_default_credentials.json"
+
+# DANGER WILL ROBINSON
+# sometimes it's just nice to grab these and not set up proxying containers. bad pattern.
+function aws-sso-export() {
+    aws configure export-credentials --profile "$@" --format env | pbcopy
+}
+
+# Created by `pipx` on 2023-11-09 21:52:02
+export PATH="$PATH:/Users/isaac/.local/bin"
+eval "$(register-python-argcomplete pipx)"
