@@ -52,3 +52,7 @@ brew "gnu-tar"
 brew "gnu-which"
 brew "grep"
 brew "make"
+
+# k8s
+brew "cfssl"
+brew "kubectl"
