@@ -1,0 +1,22 @@
+[
+  {
+    "key": "cmd+k shift+alt+cmd+up",
+    "command": "workbench.action.moveEditorToAboveGroup"
+  },
+  {
+    "key": "cmd+k shift+alt+cmd+down",
+    "command": "workbench.action.moveEditorToBelowGroup"
+  },
+  {
+    "key": "cmd+k shift+alt+cmd+left",
+    "command": "workbench.action.moveEditorToLeftGroup"
+  },
+  {
+    "key": "cmd+k shift+alt+cmd+right",
+    "command": "workbench.action.moveEditorToRightGroup"
+  },
+  {
+    "key": "shift+ctrl+alt+cmd+T",
+    "command": "workbench.view.testing.focus"
+  }
+]

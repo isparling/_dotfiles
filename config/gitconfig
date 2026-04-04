@@ -6,7 +6,7 @@
 	gpgsign = true
 [user]
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKFgnez4q4/eV/APGGA5Q+dQCqyu42elDBpu3YTeMLUJ
-	email = 223606+isparling@users.noreply.github.com
+    email = 223606+isparling@users.noreply.github.com
     name = Isaac Sparling
 [github]
     user = isparling
@@ -32,7 +32,6 @@
     up = "!git remote update -p && git merge --ff-only @{u}"
     sortdiff = !sh -c 'git diff "$@" | grep "^[+-]" | sort --key=1.2 | uniq -u -s1'
     deletemerged = "!git branch --merged main | grep -v '^[ *]*main$' | xargs git branch -d"
-    # bclean = "!f() { BR=`git rev-parse --abbrev-ref HEAD` git branch --merged ${BR} | grep -v " ${BR}$" | xargs -r git branch -d; }; f"
     co = checkout
     sta = stash
     br = branch
@@ -44,14 +43,10 @@
     fe = fetch
     unstage = reset HEAD --
     search = log --all --grep
-    # short logs
-    lg  ="!git --no-pager log -10 --pretty=format:\"%h - %an: %s (%ar)\""
-    # short status
+    lg  ="!git --no-pager log -10 --pretty:format:\"%h - %an: %s (%ar)\""
     st = status -sb
-    # short difs
     dif = "!git --no-pager diff --color --stat"
-    # what did i do since yesterday?
-    standup = "!git log --since yesterday --autho `git config user.email` --pretty=short"
+    standup = "!git log --since yesterday --author `git config user.email` --pretty=short"
 [apply]
     whitespace = nowarn
 [push]

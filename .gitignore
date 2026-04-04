@@ -1,1 +1,37 @@
-lib/
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+Desktop.ini
+
+# Editor
+*.swp
+*.swo
+*~
+.vscode/extensions/
+
+# Shell
+*.history
+*-history
+*.backup
+*.bk
+.zcompdump
+.zsh_sessions/
+.lesshst
+.node_repl_history
+.python_history
+
+# Build artifacts
+node_modules/
+dist/
+build/
+*.pyc
+__pycache__/
+
+# Env (use .env for local overrides)
+.env
+*.local
+.secrets.env

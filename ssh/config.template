@@ -1,0 +1,21 @@
+# SSH config template
+# Copy to ~/.ssh/config and customize
+
+# Example entries:
+# Host github
+#     HostName github.com
+#     User git
+#     IdentityFile ~/.ssh/id_ed25519
+#     IdentitiesOnly yes
+#
+# Host my-server
+#     HostName server.example.com
+#     User ubuntu
+#     Port 22
+#     IdentityFile ~/.ssh/id_ed25519
+
+# Global settings
+Host *
+    AddKeysToAgent yes
+    UseKeychain yes
+    IdentityAgent ~/Library/Group\ Containers/2BUA8C4S2C.com.1password.t/agent.sock

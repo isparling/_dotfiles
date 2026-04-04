@@ -1,0 +1,10 @@
+# PATH configuration - sourced first by all shells
+# Keep minimal to avoid issues
+
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
+# User-local binaries
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.bun/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
+export PATH="$HOME/.opencode/bin:$PATH"

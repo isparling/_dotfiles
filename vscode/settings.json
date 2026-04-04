@@ -1,0 +1,118 @@
+{
+  "editor.fontSize": 10,
+  "editor.formatOnSave": true,
+  "editor.fontFamily": "FiraCode-Light",
+  "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'zero', 'onum'",
+  "editor.minimap.enabled": false,
+  "editor.parameterHints.enabled": false,
+  "editor.renderWhitespace": "none",
+  "editor.semanticHighlighting.enabled": false,
+  "editor.tabSize": 2,
+  "editor.rulers": [
+    {
+      "column": 100,
+      "color": "#222"
+    },
+    {
+      "column": 120,
+      "color": "#333"
+    }
+  ],
+  "js/ts.implicitProjectConfig.experimentalDecorators": true,
+  "search.exclude": {
+    "**/django/app/static/**/*": true,
+    "**/__generated__": true,
+    "**/.git": true,
+    "**/*.code-search": true,
+    "**/*.generated.ts": true,
+    "**/*.gql": true,
+    "**/*.graphql": true,
+    "**/bower_components": true,
+    "**/dist": true,
+    "**/lib/**/*.d.ts": true,
+    "**/lib/**/*.js": true,
+    "**/lib/**/*.js.*": true,
+    "**/node_modules": true,
+    "**/node_modules/**": true,
+    "**/yarn.lock": true,
+    "graphql.schema.json": true
+  },
+  "workbench.colorTheme": "One Hunter Flexoki Dark",
+  "workbench.editor.showTabs": "multiple",
+  "workbench.iconTheme": "file-icons",
+  "workbench.fontAliasing": "default",
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "strings": "on",
+      "other": "on"
+    }
+  },
+  "debug.toolBarLocation": "docked",
+  "explorer.confirmDragAndDrop": false,
+  "files.associations": {
+    "*.yaml.jst": "yaml",
+    "*.env": "shellscript"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.startupEditor": "none",
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[graphql]": {
+    "editor.formatOnSave": true
+  },
+  "terminal.integrated.gpuAcceleration": "on",
+  "normanstypczynski.gqlformatter.formatGqlString.tabSize": 2,
+  "normanstypczynski.gqlformatter.enable.graphql": true,
+  "eslint.alwaysShowStatus": true,
+  "playwright.reuseBrowser": true,
+  "redhat.telemetry.enabled": false,
+  "editor.unicodeHighlight.includeStrings": false,
+  "yaml.schemas": {
+    "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/github-action.json": ".github/actions/**/action.yml"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[python]": {
+    "editor.formatOnSave": true
+  },
+  "python.analysis.completeFunctionParens": true,
+  "json.schemas": [],
+  "playwright.showTrace": false,
+  "black-formatter.showNotifications": "onWarning",
+  "workbench.editor.empty.hint": "hidden",
+  "CodeGPT.apiKey": "Ollama",
+  "CodeGPT.model": "codellama:34b",
+  "CodeGPT.Autocomplete.enabled": true,
+  "CodeGPT.Autocomplete.provider": "Ollama - codellama",
+  "workbench.sideBar.location": "right",
+  "gopls": {
+    "ui.semanticTokens": true,
+    "ui.completion.usePlaceholders": true,
+    "ui.completion.completeFunctionCalls": true
+  },
+  "[go]": {
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "claudeCode.useCtrlEnterToSend": true,
+  "chat.useAgentSkills": true,
+  "claudeCode.preferredLocation": "panel"
+}

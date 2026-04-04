@@ -1,0 +1,67 @@
+# Bash settings
+shopt -s checkwinsize
+HISTCONTROL=ignoreboth
+shopt -s histappend
+HISTSIZE=10000
+HISTFILESIZE=20000
+HISTIGNORE="&:clear:ll:ls:[bf]g:cd:exit"
+HISTTIMEFORMAT="%F %T > "
+
+# Shell options
+shopt -s cdspell
+shopt -s cmdhist
+shopt -s lithist
+shopt -s no_empty_cmd_completion
+
+# Terminal colors
+if [[ -n ${TERM} && ! "${TERM}" == 'dumb' && ! "$TERM}" == 'unknown' ]]; then
+    export CRST="\[$(tput sgr0)\]"
+    export BOLD="\[$(tput bold)\]"
+    export LRED="\[$(tput setaf 1)\]"
+    export LGRN="\[$(tput setaf 2)\]"
+    export LYEL="\[$(tput setaf 3)\]"
+    export LBLU="\[$(tput setaf 4)\]"
+    export LMAG="\[$(tput setaf 5)\]"
+    export LCYA="\[$(tput setaf 6)\]"
+    export LWHT="\[$(tput setaf 7)\]"
+fi
+
+# Locale
+export LANG="en_US.UTF-8"
+export EDITOR="vim"
+export CLICOLOR=1
+export LESS=' -R '
+
+# Brew
+export BREW_PREFIX=$(brew --prefix)
+export PATH="${BREW_PREFIX}/opt/openssl/bin:${BREW_PREFIX}/sbin:${PATH}"
+
+# Docker compose
+export COMPOSE_HTTP_TIMEOUT=300
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# Aliases
+alias ll="ls -lFh"
+alias la="ls -A"
+alias l="ls -CF"
+alias ..='cd ..'
+alias diff='colordiff'
+
+# Git alias
+alias git='git'
+
+# Functions
+function openpr() {
+    github_url=$(git remote -v | awk '/fetch/{print $2}' | sed -Ee 's#(git@|git://)#https://#' -e 's@com:@com/@' -e 's%\.git$%%' | awk '/github/')
+    branch_name=$(git symbolic-ref HEAD | cut -d"/" -f 3,4)
+    if [ -n "$1" ]; then
+        source_branch="$1"
+    else
+        source_branch=$([[ $(git branch | grep main) =~ "main" ]] && echo "main" || echo "master")
+    fi
+    pr_url="$github_url/compare/$source_branch...$branch_name"
+    open "$pr_url"
+}
