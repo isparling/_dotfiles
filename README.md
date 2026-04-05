@@ -1,16 +1,37 @@
 # dotfiles
 
-# Installation
+My dotfiles for setting up a new macOS machine.
 
-Note: this is destructive, and will overwrite any `.zshrc` customizations you already have
+## What's Included
+
+- **Shell**: zsh, bash configs (zshrc, zshenv, bashrc, gitconfig, vimrc)
+- **Node**: npmrc, pnpmrc
+- **VS Code**: settings, keybindings, 54 extensions
+- **Ghostty**: terminal config
+- **Rectangle Pro**: window management config
+- **SSH**: config template
+
+## Installation
 
 ```zsh
 cd ~
-git clone git@github.com:isparling/_dotfiles.git
+git clone git@github.com:isparling/_dotfiles.git ~/_
 cd _dotfiles
-zsh ./install.sh
+./install.sh
 ```
 
+Options:
+- `./install.sh --skip-brew` - Skip Homebrew bundle install
 
-Install iterm2 colors:
-* preferences -> profile -> colors -> import preset
+## Manual Steps After Install
+
+1. Restart shell
+2. Add secrets to `~/.secrets.env` or uncomment vault paths in config/zshrc
+3. Set up SSH config from template: `cp ssh/config.template ~/.ssh/config`
+4. Configure Rectangle Pro: import `rectangle-pro/config.json`
+
+## Manual Steps (Not Tracked)
+
+- Alfred preferences
+- BetterTouchTool presets
+- SSH keys (keep in `~/.ssh/`, add to 1Password)
